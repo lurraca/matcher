@@ -24,9 +24,6 @@ internal class OpportunityControllerTest {
     }
 
     fun testJson() =
-            "{\"representative\":" +
-                    "{\"name\":\"hey\",\"email\":\"ho\",\"phone\":\"koo-aid\"}," +
-            "\"company\":" +
-                    "{\"name\":\"hi\",\"address\":\"haha\",\"contact\":{\"name\":\"wow\",\"email\":\"yo\",\"phone\":\"thing\"}}}"
+            "[{\"representative\":{\"name\":\"hey\",\"email\":\"ho\",\"phone\":\"koo-aid\"},\"company\":{\"name\":\"hi\",\"address\":\"haha\",\"contact\":{\"name\":\"wow\",\"email\":\"yo\",\"phone\":\"thing\"}}},{\"representative\":{\"name\":\"hey\",\"email\":\"ho\",\"phone\":\"koo-aid\"},\"company\":{\"name\":\"hi\",\"address\":\"haha\",\"contact\":{\"name\":\"wow\",\"email\":\"yo\",\"phone\":\"thing\"}}}]"
 
 }

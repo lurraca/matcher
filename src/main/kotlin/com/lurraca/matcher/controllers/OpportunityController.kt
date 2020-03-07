@@ -12,9 +12,16 @@ class OpportunityController{
 
     @GetMapping("/api/v1/opportunities")
     fun opportunities() =
-            Opportunity(
+            listOf(
+                Opportunity(
                     Representative("hey","ho", "koo-aid"),
                     Company("hi", "haha", Contact("wow", "yo", "thing"))
+            ),
+                Opportunity(
+                        Representative("hey","ho", "koo-aid"),
+                        Company("hi", "haha", Contact("wow", "yo", "thing"))
+                )
             )
+
 }
 
