@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>List of Opportunities</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
+</head>
+<body>
+    <div id="layout" class="pure-g">
+        <div class="pure-u-1-5"></div>
+        <div class="main pure-u-3-5">
+            <h1>List of Opportunities</h1>
+
+            <div id="opportunies-row">
+                <ul>
+                    <th:block th:each="opportunity : ${opportunities}">
+                        <li>
+                            <p>
+                                The representative <b><span th:utext="${opportunity.representative.name}">{rep_name}</span></b>, <span th:utext="${opportunity.representative.email}">{rep_email}</span>, <span th:utext="${opportunity.representative.phone}">{rep_phone}</span> has to visit  <b><span th:utext="${opportunity.company.name}">{company_name}</span></b> at
+                                <span th:utext="${opportunity.company.address}">{rep_address}</span> and talk to  <span th:utext="${opportunity.company.contact.name}">{contact_name}</span>,  <span th:utext="${opportunity.company.contact.email}">{contact_email}</span>,  <span th:utext="${opportunity.company.contact.phone}">{contact_phone}</span>
+                            </p>
+                        </li>
+                    </th:block>
+                </ul>
+            </div>
+        </div>
+        <div class="pure-u-1-5"></div>
+    </div>
+
+</body>
+</html>
