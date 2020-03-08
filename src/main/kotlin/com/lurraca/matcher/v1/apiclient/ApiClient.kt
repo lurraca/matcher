@@ -1,5 +1,5 @@
 package com.lurraca.matcher.v1.apiclient
-import com.lurraca.matcher.AppProperties
+import com.lurraca.matcher.ApiProperties
 import com.lurraca.matcher.v1.models.Company
 import com.lurraca.matcher.v1.models.Contact
 import com.lurraca.matcher.v1.models.Representative
@@ -14,7 +14,7 @@ import java.io.IOException
 @Component
 class ApiClient {
     @Autowired
-    private lateinit var appProperties: AppProperties
+    private lateinit var apiProperties: ApiProperties
 
     private val client = OkHttpClient()
 
@@ -22,7 +22,7 @@ class ApiClient {
         val companies = mutableListOf<Company>()
 
         val request = Request.Builder()
-                .url(appProperties.apiCompaniesEndpoint)
+                .url(apiProperties.companiesEndpoint)
                 .build()
         var responseJSON: JSONArray
 
@@ -51,7 +51,7 @@ class ApiClient {
         val representatives = mutableListOf<Representative>()
 
         val request = Request.Builder()
-                .url(appProperties.apiRepresentativesEndpoint)
+                .url(apiProperties.representativesEndpoint)
                 .build()
         var responseJSON: JSONArray
 
