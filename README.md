@@ -70,10 +70,10 @@ This application has been deployed to Heroku for easy access.
 3. ```./gradlew bootRun```
     * This will start the application on `localhost` running on port 8080.
     * Once the application is running query the endpoints:
-      * JSON Endpoint: https://localhost:8080/api/v1/opportunities
-      * HTML View: https://localhost:8080
+      * JSON Endpoint: http://localhost:8080/api/v1/opportunities
+      * HTML View: http://localhost:8080
 
-## Running tests
+# Running tests
 
 ## gradlew clean test
 
