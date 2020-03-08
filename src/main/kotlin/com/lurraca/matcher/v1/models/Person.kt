@@ -1,4 +1,4 @@
-package com.lurraca.matcher.models
+package com.lurraca.matcher.v1.models
 
 interface Person {
     val name: String

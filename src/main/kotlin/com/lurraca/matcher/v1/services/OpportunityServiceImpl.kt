@@ -1,8 +1,8 @@
-package com.lurraca.matcher.services
+package com.lurraca.matcher.v1.services
 
-import com.lurraca.matcher.models.Company
-import com.lurraca.matcher.models.Opportunity
-import com.lurraca.matcher.models.Representative
+import com.lurraca.matcher.v1.models.Company
+import com.lurraca.matcher.v1.models.Opportunity
+import com.lurraca.matcher.v1.models.Representative
 import com.lurraca.matcher.utils.GeoPoint
 import com.lurraca.matcher.utils.distanceInKM
 import org.springframework.stereotype.Service

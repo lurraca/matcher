@@ -1,8 +1,8 @@
-package com.lurraca.matcher.apiclient
+package com.lurraca.matcher.v1.apiclient
 import com.lurraca.matcher.AppProperties
-import com.lurraca.matcher.models.Company
-import com.lurraca.matcher.models.Contact
-import com.lurraca.matcher.models.Representative
+import com.lurraca.matcher.v1.models.Company
+import com.lurraca.matcher.v1.models.Contact
+import com.lurraca.matcher.v1.models.Representative
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONArray
@@ -17,7 +17,6 @@ class ApiClient {
     private lateinit var appProperties: AppProperties
 
     private val client = OkHttpClient()
-
 
     fun getCompanies(): List<Company> {
         val companies = mutableListOf<Company>()

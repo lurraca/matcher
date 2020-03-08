@@ -1,4 +1,4 @@
-package com.lurraca.matcher.controllers
+package com.lurraca.matcher.v1.controllers
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
@@ -13,7 +13,6 @@ internal class OpportunityControllerTest {
 
     @Autowired
     lateinit var testRestTemplate: TestRestTemplate;
-
 
     @Test
     fun `It should return a list of opportunities`() {

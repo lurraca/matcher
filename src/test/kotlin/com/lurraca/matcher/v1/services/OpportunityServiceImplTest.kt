@@ -1,8 +1,8 @@
-package com.lurraca.matcher.services
+package com.lurraca.matcher.v1.services
 
-import com.lurraca.matcher.models.Company
-import com.lurraca.matcher.models.Contact
-import com.lurraca.matcher.models.Representative
+import com.lurraca.matcher.v1.models.Company
+import com.lurraca.matcher.v1.models.Contact
+import com.lurraca.matcher.v1.models.Representative
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 

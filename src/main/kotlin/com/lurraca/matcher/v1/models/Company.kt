@@ -1,4 +1,4 @@
-package com.lurraca.matcher.models
+package com.lurraca.matcher.v1.models
 
 import com.fasterxml.jackson.annotation.JsonIgnore
 
