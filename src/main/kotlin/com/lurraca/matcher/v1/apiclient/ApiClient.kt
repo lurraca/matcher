@@ -19,7 +19,7 @@ class ApiClient {
     private val client = OkHttpClient()
 
     fun getCompanies(): List<Company> {
-        val companies = mutableListOf<Company>()
+        var companies = mutableListOf<Company>()
 
         val request = Request.Builder()
                 .url(apiProperties.companiesEndpoint)
@@ -31,9 +31,8 @@ class ApiClient {
 
             responseJSON = JSONArray(response.body!!.string())
 
-            for (i in 0 until responseJSON.length()) {
-                val companyJSON = responseJSON.getJSONObject(i)
-                val companyContactJSON = companyJSON["CONTACT"] as JSONObject
+            companies = responseJSON.map { companyJSON ->
+                val companyContactJSON: JSONObject = (companyJSON as JSONObject)["CONTACT"] as JSONObject
                 val company = Company(
                         companyJSON["NAME"] as String,
                         companyJSON["ADDRESS"] as String,
@@ -41,14 +40,14 @@ class ApiClient {
                 )
                 company.latitude = companyJSON["LATITUDE"] as Double
                 company.longitude = companyJSON["LONGITUDE"] as Double
-                companies.add(company)
-            }
+                company
+            }.toMutableList()
         }
         return companies
     }
 
     fun getRepresentatives(): List<Representative> {
-        val representatives = mutableListOf<Representative>()
+        var representatives = mutableListOf<Representative>()
 
         val request = Request.Builder()
                 .url(apiProperties.representativesEndpoint)
@@ -60,15 +59,19 @@ class ApiClient {
 
             responseJSON = JSONArray(response.body!!.string())
 
-            for (i in 0 until responseJSON.length()) {
-                val representativeJSON = responseJSON.getJSONObject(i)
-                val rep = Representative(representativeJSON["name"] as String, representativeJSON["email"] as String, representativeJSON["phone"] as String)
+            representatives = responseJSON.map { representativeJSON ->
+                (representativeJSON as JSONObject)
+                val representative = Representative(
+                        representativeJSON["name"] as String,
+                        representativeJSON["email"] as String,
+                        representativeJSON["phone"] as String
+                )
                 val location = (representativeJSON["location"] as String).split(", ")
-                rep.latitude = location.first().toDouble()
-                rep.longitude = location.last().toDouble()
+                representative.latitude = location.first().toDouble()
+                representative.longitude = location.last().toDouble()
 
-                representatives.add(rep)
-            }
+                representative
+            }.toMutableList()
         }
         return representatives
     }
