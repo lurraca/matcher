@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RestController
 class OpportunitiesController {
 
     @Autowired
-    lateinit var opportunityService: OpportunityService
+    private lateinit var opportunityService: OpportunityService
 
     @Autowired
-    lateinit var apiClient: ApiClient
+    private lateinit var apiClient: ApiClient
 
     @GetMapping("/api/v1/opportunities")
     @ResponseBody

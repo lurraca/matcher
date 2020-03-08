@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping
 class HomeController {
 
     @Autowired
-    lateinit var apiOpportunitiesController: OpportunitiesController
+    private lateinit var apiOpportunitiesController: OpportunitiesController
 
     @GetMapping("/")
     fun home(model: Model): String {

@@ -14,7 +14,7 @@ import org.springframework.http.HttpStatus
 internal class OpportunityIntegrationTest {
 
     @Autowired
-    lateinit var testRestTemplate: TestRestTemplate;
+    private lateinit var testRestTemplate: TestRestTemplate;
 
     @Test
     fun `It should return a list of opportunities`() {
