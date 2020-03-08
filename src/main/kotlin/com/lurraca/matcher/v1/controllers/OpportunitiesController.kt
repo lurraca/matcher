@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class OpportunityController {
+class OpportunitiesController {
 
     @Autowired
     lateinit var opportunityService: OpportunityService
