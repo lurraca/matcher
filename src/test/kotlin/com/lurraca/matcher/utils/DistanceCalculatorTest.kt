@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test
 
 internal class DistanceCalculatorTest {
     @Test
-    fun itShouldCalculateDistanceInKmBetween_NorthToSouthIreland() {
+    fun `It should calculate distance in KM Between north coast of Ireland to south coast Ireland`() {
         val north = GeoPoint(55.370775, -7.308923)
         val south = GeoPoint(51.476302, -9.370285)
         val distance = distanceInKM(north, south)
@@ -14,7 +14,7 @@ internal class DistanceCalculatorTest {
     }
 
     @Test
-    fun itShouldCalculateDistanceInKmBetween_NewYorkToLondon() {
+    fun `It should calculate distance in KM between New York and London`() {
         val newYork = GeoPoint(40.730610, -73.935242)
         val london = GeoPoint(	51.509865, -0.118092)
         val distance = distanceInKM(newYork, london)
