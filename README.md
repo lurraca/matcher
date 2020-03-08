@@ -1,15 +1,15 @@
 This application generates a list of opportunities by matching [companies](http://www.mocky.io/v2/5df8fc57300000d45688a10e) and [representatives](http://www.mocky.io/v2/5df8fc57300000d45688a10e) by distance.
 
-##Business Requirements
+## Business Requirements
 
 * A representative can only visit one company.
 * Limit matches to 100KM Distance.
 * Always find the closest representative to the company.
 * Don't show companies without representative.
 * Restful Endpoint: https://sales-opportunities.herokuapp.com/api/v1/opportunities
-* HTML View for readibility: https://sales-opportunities.herokuapp.com
+* HTML View for readability: https://sales-opportunities.herokuapp.com
 
-##My Notes
+## My Notes
 
 * I didn't use the language that I am most comfortable with, that would be Ruby. Instead I use Kotlin, which I have used in the past to some degree. There are various reason for this choice:
     * When doing coding assessment I always try to get something out of it for my own growth, rediscovering and learning new things in Kotlin and Spring Boot is a good outcome for me. I love learning.
