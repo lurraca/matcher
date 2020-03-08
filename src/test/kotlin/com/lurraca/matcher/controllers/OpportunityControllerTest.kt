@@ -19,8 +19,8 @@ internal class OpportunityControllerTest {
     fun `It should return a list of opportunities`() {
         val response = testRestTemplate.getForEntity("/api/v1/opportunities", String::class.java)
         assertNotNull(response)
-        assertEquals(response.statusCode, HttpStatus.OK)
-        assertEquals(response.body, testJson())
+        assertEquals(HttpStatus.OK, response.statusCode)
+        assertEquals(testJson(), response.body)
     }
 
     fun testJson() =
